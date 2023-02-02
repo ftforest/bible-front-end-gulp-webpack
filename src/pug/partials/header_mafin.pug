@@ -1,0 +1,15 @@
+header.header_mf
+  .header_mf__container
+    a.header_mf__logo.logo(href="#")
+      img(src="/images/mafin/logo-mafin.png")
+    nav.header_mf__menu.menu
+      ul.menu__list
+        for link in navLinksMafin
+          if link.url == '#downloadmafin'
+            +menuLinks(link.url, link.name, "_link btn_menu")
+          else
+            +menuLinks(link.url, link.name, "_link")
+        #btn_investing
+          #header_start_investing_menu.btn_primary START FOR FREE
+
+    include iconMenu_mafin
